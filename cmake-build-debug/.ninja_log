@@ -1,0 +1,20 @@
+# ninja log v5
+1452	1700	7272393181004384	untitled.exe	261af487ef5b78b9
+1	1423	7283591281066081	CMakeFiles/untitled.dir/ColorHistogram.cpp.obj	40dad85d40185a7e
+14	1484	7283591281668591	CMakeFiles/untitled.dir/SimilaritySearch.cpp.obj	57bf358a4b6157cd
+27	1566	7283591282492628	CMakeFiles/untitled.dir/ColorImage.cpp.obj	4071d566cab551b8
+3	952	7283604564232838	CMakeFiles/untitled.dir/ColorImage.cpp.obj	4071d566cab551b8
+953	1208	7283604566757849	untitled.exe	a318128bac0b384c
+4	1373	7283637526536027	CMakeFiles/untitled.dir/SimilaritySearch.cpp.obj	57bf358a4b6157cd
+1374	1706	7283637529837108	untitled.exe	a318128bac0b384c
+4	853	7283645231789322	CMakeFiles/untitled.dir/ColorImage.cpp.obj	4071d566cab551b8
+853	1139	7283645234615536	untitled.exe	a318128bac0b384c
+3	982	7283652879821718	CMakeFiles/untitled.dir/ColorImage.cpp.obj	4071d566cab551b8
+983	1259	7283652882546171	untitled.exe	a318128bac0b384c
+21	1218	7283675075862014	CMakeFiles/untitled.dir/ColorImage.cpp.obj	4071d566cab551b8
+6	1695	7283675080603844	CMakeFiles/untitled.dir/SimilaritySearch.cpp.obj	57bf358a4b6157cd
+1695	2105	7283675084660758	untitled.exe	a318128bac0b384c
+5	1985	7283697325015355	CMakeFiles/untitled.dir/ColorHistogram.cpp.obj	40dad85d40185a7e
+54	2071	7283697325871023	CMakeFiles/untitled.dir/ColorImage.cpp.obj	4071d566cab551b8
+45	2798	7283697333152492	CMakeFiles/untitled.dir/SimilaritySearch.cpp.obj	57bf358a4b6157cd
+2799	3200	7283697337143228	untitled.exe	a318128bac0b384c
