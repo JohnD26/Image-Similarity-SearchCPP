@@ -87,14 +87,9 @@ Run the program by specifying the query image filename (located in the `Query` f
 ## Sample Output
 After running the program, you should see output similar to:
 
-```
-Top 5 similar images:
-1144.jpg.txt - Score: 1
-3806.jpg.txt - Score: 0.707454
-3714.jpg.txt - Score: 0.668432
-3756.jpg.txt - Score: 0.662025
-2462.jpg.txt - Score: 0.649103
-```
+<img width="949" alt="Sample Output" src="https://github.com/user-attachments/assets/12a3491b-be94-4c24-a682-02aaf514529d">
+
+
 The scores represent the similarity between the query image and each dataset image. A score of 1 indicates an exact match in terms of color histogram.
 
 ## Visual Verification
