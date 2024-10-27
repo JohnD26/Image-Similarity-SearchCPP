@@ -59,7 +59,7 @@ Run the program by specifying the query image filename (located in the `Query` f
 
 ### Command Syntax
 ```bash
-./SimilaritySearch <queryImageFilename> <datasetDirectory>
+.\SimilaritySearch.exe <queryImageFilename> <datasetDirectory>
 ```
 - `<queryImageFilename>`: The name of the query image file (e.g., `q00.jpg`).
 - `<datasetDirectory>`: The path to the dataset directory relative to the `Src` directory (e.g., `../imageDataset2_15_20`).
@@ -77,11 +77,11 @@ Run the program by specifying the query image filename (located in the `Query` f
 2. **Run the Program**  
    From the `Src` directory, execute:
    ```bash
-   ./SimilaritySearch q00.jpg ../imageDataset2_15_20
+   .\SimilaritySearch.exe q00.jpg ..\imageDataset2_15_200
    ```
 
 ### Understanding the Paths
-- `q00.jpg` is located in `../Query/q00.jpg` (the program adds the `../Query/` path internally).
+- `q00.jpg` is located in `..\Query\q00.jpg` (the program adds the `..\Query\` path internally).
 - `../imageDataset2_15_20` points to the dataset directory one level up from `Src`.
 
 ## Sample Output
