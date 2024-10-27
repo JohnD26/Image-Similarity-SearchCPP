@@ -77,7 +77,7 @@ Run the program by specifying the query image filename (located in the `Query` f
 2. **Run the Program**  
    From the `Src` directory, execute:
    ```bash
-   .\SimilaritySearch.exe q00.jpg ..\imageDataset2_15_200
+   .\SimilaritySearch.exe q00.jpg ..\imageDataset2_15_20
    ```
 
 ### Understanding the Paths
