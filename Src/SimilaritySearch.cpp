@@ -5,38 +5,37 @@
 #include <map>
 #include <algorithm>
 #include <filesystem>
-#include "ColorImage.h"
-#include "ColorHistogram.h"
+#include "ColorImage.h"      
+#include "ColorHistogram.h"  
 
-namespace fs = std::filesystem; 
+namespace fs = std::filesystem;
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
-        std::cout << "Usage: ./SimilaritySearch <queryImageFilename> <datasetDirectory>" << std::endl; //error handling if user uses incorrect arguments while running  SimilaritySearch
+        std::cout << "Usage: SimilaritySearch <queryImageFilename> <datasetDirectory>" << std::endl;
         return 1;
     }
 
-    std::string queryImageFilename = argv[1];
+    // Adjusted to look for the Query directory in the parent directory
+    std::string queryImageFilename = "../Query/" + std::string(argv[1]);
     std::string datasetDirectory = argv[2];
 
-    // jpg to ppm conversion in the filename
+    // Convert .jpg to .ppm if necessary
     if (queryImageFilename.find(".jpg") != std::string::npos) {
         queryImageFilename.replace(queryImageFilename.end() - 4, queryImageFilename.end(), ".ppm");
     }
 
     try {
-        // Loading and process the query image
         ColorImage queryImage(queryImageFilename);
-        queryImage.reduceColor(3); // using 3-bit color reduction
+        queryImage.reduceColor(3);
 
         ColorHistogram queryHistogram(3);
         queryHistogram.setImage(queryImage);
         queryHistogram.computeHistogram();
 
-        // Going through the directory dataset
         std::vector<std::string> listOfFiles;
 
-        // Checking if the datasetDirectory exists and is  a directory
+        // Check if the dataset directory exists and is a directory
         if (fs::exists(datasetDirectory) && fs::is_directory(datasetDirectory)) {
             for (const auto& entry : fs::directory_iterator(datasetDirectory)) {
                 if (entry.is_regular_file()) {
@@ -52,9 +51,9 @@ int main(int argc, char* argv[]) {
         std::map<std::string, double> similarityScores;
 
         for (const auto& filename : listOfFiles) {
-            if (filename.find(".txt") != std::string::npos) { // Making sure we use .txt files only
+            if (filename.find(".txt") != std::string::npos) {
                 ColorHistogram datasetHistogram(datasetDirectory + "/" + filename);
-                datasetHistogram.normalizeBaseHistogram(); // Normalizing
+                datasetHistogram.normalizeBaseHistogram();
 
                 double score = queryHistogram.compare(datasetHistogram);
                 similarityScores.insert({filename, score});
